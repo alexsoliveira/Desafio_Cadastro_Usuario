@@ -1,19 +1,19 @@
-﻿using Bogus;
+﻿using Desafio.Cadastro.Domain.Repository;
 using Desafio.Cadastro.UnitTests.Common;
-using Xunit;
 using DomainEntity = Desafio.Cadastro.Domain.Entity;
+using Moq;
+using Desafio.Cadastro.Application.Interfaces;
 
-namespace Desafio.Cadastro.UnitTests.Domain.Entity.Usuario
+namespace Desafio.Cadastro.UnitTests.Application.Usuario.Common
 {
-    [CollectionDefinition(nameof(UsuarioTestFixture))]
-    public class UsuarioTextFixtureCollection
-    : ICollectionFixture<UsuarioTestFixture>
-    { }
+    public abstract class UsuarioUseCasesBaseFixture
+        : BaseFixture
+    {
+        public Mock<IUsuarioRepository> GetRepositoryMock()
+            => new();
 
-    public class UsuarioTestFixture : BaseFixture
-    {        
-        public UsuarioTestFixture() 
-            : base() { }
+        public Mock<IUnitOfWork> GetUnitOfWorkMock()
+            => new();
 
         public string GetValidUsuarioName()
         {
@@ -28,7 +28,7 @@ namespace Desafio.Cadastro.UnitTests.Domain.Entity.Usuario
             return usuarioNome;
         }
 
-        public DomainEntity.Usuario GetValidUsuario()
+        public DomainEntity.Usuario GetExampleUsuario()
             => new(
                 GetValidUsuarioName()
             );
