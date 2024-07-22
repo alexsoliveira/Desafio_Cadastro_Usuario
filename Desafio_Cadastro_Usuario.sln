@@ -7,13 +7,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1A906340-C1E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5548366E-E8C9-4265-83D4-ADFE5A9D2F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Cadastro.UnitTests", "tests\Desafio.Cadastro.UnitTests\Desafio.Cadastro.UnitTests.csproj", "{C8AFD493-E752-4D62-BC42-A800A1A3E23C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Cadastro.UnitTests", "tests\Desafio.Cadastro.UnitTests\Desafio.Cadastro.UnitTests.csproj", "{C8AFD493-E752-4D62-BC42-A800A1A3E23C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Cadastro.Domain", "src\Desafio.Cadastro.Domain\Desafio.Cadastro.Domain.csproj", "{9F084FBE-D8BE-439A-BFCD-CE2F7927EC59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Cadastro.Domain", "src\Desafio.Cadastro.Domain\Desafio.Cadastro.Domain.csproj", "{9F084FBE-D8BE-439A-BFCD-CE2F7927EC59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Cadastro.Application", "src\Desafio.Cadastro.Application\Desafio.Cadastro.Application.csproj", "{031A3827-559F-4E45-ADD4-D279CD8E796A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Cadastro.Application", "src\Desafio.Cadastro.Application\Desafio.Cadastro.Application.csproj", "{031A3827-559F-4E45-ADD4-D279CD8E796A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Cadastro.Infra.Data.EF", "src\Desafio.Cadastro.Infra.Data.EF\Desafio.Cadastro.Infra.Data.EF.csproj", "{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Cadastro.Infra.Data.EF", "src\Desafio.Cadastro.Infra.Data.EF\Desafio.Cadastro.Infra.Data.EF.csproj", "{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Cadastro.Api", "src\Desafio.Cadastro.Api\Desafio.Cadastro.Api.csproj", "{1E167A5F-BA5D-4135-A057-8C24E6A51ED9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "env", "env", "{98B37C1E-D22D-4B42-B7E0-346CA7A5E2E2}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +44,10 @@ Global
 		{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E167A5F-BA5D-4135-A057-8C24E6A51ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E167A5F-BA5D-4135-A057-8C24E6A51ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E167A5F-BA5D-4135-A057-8C24E6A51ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E167A5F-BA5D-4135-A057-8C24E6A51ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +57,7 @@ Global
 		{9F084FBE-D8BE-439A-BFCD-CE2F7927EC59} = {1A906340-C1E1-460F-A311-5CB587E2853A}
 		{031A3827-559F-4E45-ADD4-D279CD8E796A} = {1A906340-C1E1-460F-A311-5CB587E2853A}
 		{F6B70446-AD13-4FA5-A5F2-D2D64DA499F5} = {1A906340-C1E1-460F-A311-5CB587E2853A}
+		{1E167A5F-BA5D-4135-A057-8C24E6A51ED9} = {1A906340-C1E1-460F-A311-5CB587E2853A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA68BA76-DAB8-47A3-B02C-AB485BC64481}

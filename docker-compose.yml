@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+    desafio.cadastro.api:
+        image: desafio-cadastro-api:latest        
+        container_name: desafio.cadastro.api
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_HTTP_PORTS=5000
+            - ASPNETCORE_HTTPS_PORTS=5001    
+            - ASPNETCORE_URLS=http://*:5000
+        build:
+            context: ./src
+            dockerfile: ./Desafio.Cadastro.Api/Dockerfile
+        ports:
+            - "5000:5000"
+            - "5001:5001"        
+        
+    desafio.cadastro.database:
+        image: postgres:latest
+        container_name: desafio.cadastro.database
+        environment:
+          - POSTGRES_DB=UsuarioDb
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=postgres
+        volumes:
+          - ./.containers/usuario-db:/var/lib/postgresql/data 
+        ports:
+          - "5432:5432"

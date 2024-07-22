@@ -14,7 +14,10 @@ namespace Desafio.Cadastro.Application.UseCases.Usuario.ListUsuarios
             string sort = "",
             SearchOrder dir = SearchOrder.Asc)
             : base(page, perPage, search, sort, dir)
-        {
-        }
+        { }
+
+        public ListUsuariosInput()
+            : base(1, 15, "", "", SearchOrder.Asc)
+        { }
     }
 }
