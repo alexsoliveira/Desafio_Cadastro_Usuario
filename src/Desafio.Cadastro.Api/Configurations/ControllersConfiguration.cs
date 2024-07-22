@@ -9,9 +9,7 @@ namespace Desafio.Cadastro.Api.Configurations
             this IServiceCollection services
         )
         {
-            services.AddControllers(options 
-                => options.Filters.Add(typeof(ApiGlobalExceptionFilter))
-            );            
+            services.AddControllers();            
             services.AddDocumentation();
             return services;
         }
@@ -23,30 +21,7 @@ namespace Desafio.Cadastro.Api.Configurations
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(option =>
             {
-                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Desafio Cadastro Usuario", Version = "v1" });
-                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    In = ParameterLocation.Header,
-                    Description = "Please enter a valid token",
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.Http,
-                    BearerFormat = "JWT",
-                    Scheme = "Bearer"
-                });
-                option.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type=ReferenceType.SecurityScheme,
-                                Id="Bearer"
-                            }
-                        },
-                        new string[]{}
-                    }
-                });
+                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Desafio Cadastro Usuario", Version = "v1" });                
             });
             return services;
         }

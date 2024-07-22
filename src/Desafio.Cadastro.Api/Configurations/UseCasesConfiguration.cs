@@ -3,6 +3,7 @@ using Desafio.Cadastro.Application.UseCases.Usuario.CreateUsuario;
 using Desafio.Cadastro.Domain.Repository;
 using Desafio.Cadastro.Infra.Data.EF;
 using Desafio.Cadastro.Infra.Data.EF.Repositories;
+using MediatR;
 
 namespace Desafio.Cadastro.Api.Configurations
 {
@@ -12,8 +13,7 @@ namespace Desafio.Cadastro.Api.Configurations
             this IServiceCollection services
         )
         {
-            services.AddMediatR(cfg 
-                => cfg.RegisterServicesFromAssemblyContaining(typeof(CreateUsuario)));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining(typeof(CreateUsuario)));
             services.AddRepositories();
             return services;
         }
